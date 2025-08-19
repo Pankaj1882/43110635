@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      background-color: rgb(125, 166, 166);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .he {
+      background-color: antiquewhite;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .he h1, .he h2 {
+      margin: 5px 0;
+    }
+
+    .he img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      border: 2px solid black;
+    }
+
+    .section {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fdf7fa;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .flex-container, .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-evenly;
+    }
+
+    .box, .skills-box {
+      background-color: #ffb997;
+      flex: 1 1 300px;
+      max-width: 45%;
+      padding: 30px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills-box {
+      background-color: #a5a58d;
+      flex: 1 1 250px;
+      max-width: 30%;
+    }
+
+    @media (max-width: 900px) {
+      .box, .skills-box {
+        max-width: 100%;
+      }
+      .he {
+        flex-direction: column;
+        text-align: center;
+      }
+      .he img {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="he">
+      <div>
+        <h1>Pankaj Vinod Katkar</h1>
+        <h2>BE-CSE</h2>
+        <h2>Sathyabama University</h2>
+      </div>
+      <img src="pan.jpg" alt="Profile Photo">
+    </div>
+
+    <hr>
+    <div class="section">
+      <h2>Objective</h2>
+      <p style="font-size: 18px;">Seeking a challenging role of Java full stack developer in a reputable organization to expand my learnings, knowledge and skills.</p>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div class="flex-container">
+        <div class="box">
+          <h3>Senior Secondary Education</h3>
+          <p style="text-align: left;">School Name: Bright Minds Vidyodaya<br>Year Of Passing: 2021<br>Percentage: 84%</p>
+        </div>
+        <div class="box">
+          <h3>Higher Senior Secondary Education</h3>
+          <p style="text-align: left;">School Name: Sri Chaitanya<br>Year Of Passing: 2023<br>Percentage: 80%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skills-box">
+          <h3>Skills</h3>
+          <p style="text-align: left;">Front end- Html, CSS, Javascript<br>AWS<br>Core Java<br>Spring-Boot</p>
+        </div>
+        <div class="skills-box">
+          <h3>Projects</h3>
+          <p style="text-align: left;">Music Recommendation System<br>AI - Avatar<br>Attendance-Bot<br>Leaf Cleaner</p>
+        </div>
+        <div class="skills-box">
+          <h3>Experiences</h3>
+          <p style="text-align: left;">6 Months Internship In Opentext<br>2 Years In TCS</p>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
