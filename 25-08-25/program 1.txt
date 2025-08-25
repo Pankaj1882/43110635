@@ -1,0 +1,26 @@
+package tuesday;
+import java.util.*;
+public class basic {
+	public static void main(String args[]){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter your marks");
+		int n = scan.nextInt();
+		if(n>80){
+			System.out.println("a");
+		}
+		else if(n>59 && n<81){
+			System.out.println("b");
+		}
+		else if(n>49 && n<60){
+			System.out.println("c");
+		}
+		else if(n>44 && n<50){
+			System.out.println("d");
+		}
+		else if(n>24 && n<45){
+			System.out.println("e");
+		}
+		else
+			System.out.println("f");
+	}
+}

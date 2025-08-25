@@ -1,0 +1,17 @@
+package tuesday;
+import java.util.*;
+public class basic {
+	public static void main(String args[]){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the value");
+		int n = scan.nextInt();
+		if(n<0){
+		int m=-1;
+		n=n*m;
+		System.out.println(n);
+	}
+		else{
+			System.out.println(n);
+		}
+}
+}
