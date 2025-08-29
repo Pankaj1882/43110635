@@ -1,0 +1,34 @@
+11.Write an SQL query to print details of the Workers whose SALARY lies between 100000 and 500000.
+=  select * from Worker where salary between 100000 and 500000;
+
+12.Write an SQL query to fetch the count of employees working in the department ‘Admin’.
+=  select DEPARTMENT , count(worker_id) as total_employees_in_admin from Worker where DEPARTMENT = 'Admin' group by DEPARTMENT;
+
+13.Write an SQL query to fetch the no. of workers for each department in the descending order.
+=  select department , count(worker_id) as total_employees from Worker group by department order by count(worker_id) ;
+
+15.Write an SQL query to show only odd rows from a table.
+=  select * from worker where (worker_id % 2 != 0);
+
+16.Write an SQL query to show the top 4 records of a table.
+=  select * from worker limit 4;
+
+18.Write an SQL query to show the second highest salary from a table.
+=  select first_name , max(salary) from worker group by first_name limit 1 offset 2 ;
+
+20.Write an SQL query to fetch the first 50% records from a table. (without using limit and offset)
+=  select * from worker
+   where worker_id<=(select count(*)/2 from worker);
+
+21.Write an SQL query to fetch the departments that have less than five people in it.
+= SELECT department, count(*) AS total_employees from Worker GROUP BY department having COUNT(*) < 5;
+
+22.Write an SQL query to show all departments along with the number of people in there.
+=  select department , count(worker_id) as total_employees from worker group by department;
+
+23.Write an SQL query to show the last record from a table.
+=  SELECT * FROM Worker ORDER BY worker_id DESC
+   LIMIT 1;
+
+24.Write an SQL query to fetch the names of workers who earn the highest salary.
+=  select first_name , salary from worker where salary = (select max(salary) from worker);
