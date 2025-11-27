@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Connect</title>
+    <style>
+        body {
+            background-color: lightpink;
+        }
+        .foot {
+            background-color: grey;
+            padding: 40px 10px;
+        }
+        form {
+            background-color: beige;
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="date"], input[type="password"] {
+            width: 80%;
+            padding: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; background-color: grey; padding: 50px;">STUDENT'S CONNECT</h1>
+    
+    <form>
+        <h2>Welcome To Student's Connect</h2>
+        <div class="form-container">
+            <label for="fname" style="margin-right: 180px;">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname"style="margin-right: 180px;">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+            <label for="ename"style="margin-right: 210px;">Email</label>
+            <input type="text" id="ename" name="ename" required>
+            <label for="dob"style="margin-right: 210px;">DOB</label>
+            <input type="date" id="dob" name="dob" required>
+            <label for="password"style="margin-right: 190px;">Password</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirmPassword"style="margin-right: 130px;">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div class="button-container">
+                <input type="button" value="Register">
+                <input type="button" value="Reset">
+            </div>
+        </div>
+    </form>
+    <br>
+    <footer class="foot">
+        <h3 style="text-align: center;">Contact Us</h3>
+        <p style="text-align: center;">&copy; 2025 Face Prep. All rights reserved.</p>
+    </footer>
+</body>
+</html>

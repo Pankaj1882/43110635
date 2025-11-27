@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Zwigato</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        flex-direction: row;
+        background-color: #ffffff;
+    }
+    .brand{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        font-size: 20px;
+    
+    }
+    .contact{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        height: 10px;
+        font-size: 20px;
+    }
+    .contact >a{
+        text-decoration: none;
+        color: black;
+    }
+    .signup{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        gap: 15px;
+        height:3px;
+    }
+    .btn{
+        border-radius: 15px;
+        color:#121212;
+        padding: 5px 15px;
+        border: 2px solid black;
+        background-color: aliceblue;
+    }
+    .photo{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(87, 216, 216);
+        width:100%;
+        height: 300px;
+    }
+    @media only screen and (max-width: 600px){
+        .contact{
+            display: none;
+        }
+        body{
+            background-color: bisque;
+        }
+        .navbar{
+            background-color: white;
+        }
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(243, 244, 239, 0);
+        width: 100%;
+        height: 400px;
+        justify-content: center;
+    }
+    .bg{
+        display: flex;
+        background-color: rgb(32, 163, 219);
+        width: 80%;
+        height: 400px;
+        align-items: center;
+        justify-content: start;
+        margin: 50px;
+        border-radius: 25px;
+        background-image: url("mainbg.avif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
+    .poster-info{
+        margin-left:30px ;
+        width: 50%;
+        text-align: start;
+        color: #ffffff;
+    }
+    .btn-signup{
+        border-radius: 20px;
+        padding: 4px;
+        background-color: rgb(180, 189, 189);
+        border: 2px solid black;
+        width: 80px;
+    }
+    .btn-signup:hover{
+        transform: scale(1.1);
+    }
+    .explore{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(243, 244, 239, 0);
+        width: 80%;
+        height: 400px;
+        justify-content: center;
+        margin: 50px;
+        align-items: center;
+        margin-left: 40px;
+       
+    }
+    .box{
+        display: flex;
+        width: 80%;
+        background-color: rgba(127, 255, 212, 0);
+        justify-content: space-around;
+        align-items: start;
+        flex-direction: column;
+    }
+    .info{
+        text-align: left;
+        
+    }
+    .food{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(250, 235, 215, 0);
+        width: 100%;
+        height: 200px;
+    }
+    .items{
+        display: flex;
+        width: 200px;
+        height: 100%;
+        margin-right: 20px;
+        padding: 10px;
+        flex-direction:column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <div class="brand"><img src="logo.png" style="width: 83px;height: 41;"></div>
+        <div class="contact">
+            <a href="/">Home</a>
+            <a href="/">Menu</a>
+            <a href="/">Contact Us</a>
+        </div>
+        <div class="signup">
+            <a href="/"><img src="cart.jpg"></a>
+            <button class="btn" value="sign up">Sign Up</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bg">
+            <div class="poster-info">
+            <h2>Order your favorite food here</h2>
+            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise.</p>
+            <button class="btn-signup" >View Menu</button>
+            </div>
+        </div>
+    </div>
+    <div class="explore">
+        <div class="box">
+            <div class="info">
+            <h2>Explore our menu</h2>
+            <p>Choose from a diverse menu featuring a delectable array of dishes.Our mission is to satisfy your cravings and elevate your dining experience,one delicious meal at a time</p>
+            </div>
+            <div class="food">
+                <div class="items">
+                    <img src="food1.webp">
+                    <p>Salad</p>
+                </div>
+                <div class="items">
+                    <img src="food2.jpg" style="width: 130px;height: 131px;border-radius: 50%;">
+                    <p>Biriyani</p>
+                </div>
+                <div class="items">
+                    <img src="food3.jpg" style="width: 130px;height: 131px;border-radius: 50%;">
+                    <p>Burger</p>
+                </div>
+                <div class="items">
+                    <img src="food4.jpg" style="width: 130px;height: 131px;border-radius: 50%;">
+                    <p>Desert</p>
+                </div>
+                <div class="items">
+                    <img src="food5.jpg" style="width: 130px;height: 131px;border-radius: 50%;">
+                    <p>Cakes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

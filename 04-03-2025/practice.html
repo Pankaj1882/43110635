@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<h1 style="text-align: center;"> LOGIN FORM</h1>
+    <body style="background-color: rgb(34, 154, 154);">
+        <style>
+            form{
+                padding: 50px;
+                background-color: rgb(183, 120, 42);
+                border-radius: 60px; 
+                max-width:400px;
+                margin: auto;
+            }
+        </style>
+        <form>
+            <label for="fname" style="text-align: center;">First Name</label><br>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="gender" style="text-align: center;">Gender</label><br>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+            <label for="password" style="text-align: center;">Password</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</head>
