@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(38, 25, 25); 
+  color: rgb(187, 39, 39);
+  transition: 0.3s ease;           
+}
+
+body.dark-theme {
+  background-color: #282c34;     
+  color: #663a3a;
+}
+
+body.dark-theme .container {
+  border: 2px solid #5C6773;       
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
