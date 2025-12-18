@@ -1,0 +1,496 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    min-height: 100vh;
+}
+
+/* ===== Center Card ===== */
+.card {
+    background: #ffffff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Headings ===== */
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ===== Forms ===== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* ===== Buttons ===== */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4a90e2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+/* ===== Links ===== */
+.link-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+/* ===== Layout Helpers ===== */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #4a90e2;
+    color: white;
+}
+
+.delete-btn {
+    color: white;
+    background: #e74c3c;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* ===== Star Rating ===== */
+.star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 30px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f5b301;
+}
+
+.success-msg {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* SEARCH & FILTER */
+.search-filter-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.search-form,
+.filter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.search-form input,
+.filter-form select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.search-form button,
+.filter-form button {
+    padding: 8px 14px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover,
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER LINKS */
+.bottom-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+}
+
+/* AUTH PAGES */
+
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 30px 35px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.auth-card button {
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #5a67d8;
+}
+
+.auth-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* MESSAGES */
+.error {
+    margin-top: 10px;
+    color: red;
+    font-size: 13px;
+}
+
+.success {
+    margin-top: 10px;
+    color: green;
+    font-size: 13px;
+}
+
+/* FEEDBACK FORM */
+
+.feedback-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.feedback-card {
+    background: #ffffff;
+    width: 420px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.feedback-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.feedback-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-card input,
+.feedback-card select,
+.feedback-card textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.feedback-card input:focus,
+.feedback-card select:focus,
+.feedback-card textarea:focus {
+    outline: none;
+    border-color: #43cea2;
+}
+
+.feedback-card button {
+    padding: 12px;
+    background: #43cea2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.feedback-card button:hover {
+    background: #2fa88a;
+}
+
+/* LINKS */
+.feedback-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.feedback-links a {
+    text-decoration: none;
+    color: #185a9d;
+    font-weight: bold;
+}
+
+.feedback-links a:hover {
+    text-decoration: underline;
+}
+
+/* STAR RATING */
+
+.star-rating {
+    direction: rtl;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* Hover effect */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffb703;
+}
+
+/* Selected stars */
+.star-rating input:checked ~ label {
+    color: #ffb703;
+}
+
+/* ===== Logout Button ===== */
+.logout-form {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.logout-btn {
+	background-color: #e74c3c;
+	   color: rgb(255, 255, 255);
+	   border: none;
+	   padding: 6px 10px;
+	   border-radius: 2px;
+	   font-size: 14px;
+	   cursor: pointer;
+	   transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: #c0392b;
+}
+
+

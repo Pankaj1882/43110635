@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <h1 class="title">Admin Panel</h1>
+    <p class="subtitle">Manage events and view feedback</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Manage Events</h3>
+            <p>Create & publish feedback forms</p>
+            <a th:href="@{/admin/events}" class="btn">Go</a>
+        </div>
+
+        <div class="card">
+            <h3>View Feedback</h3>
+            <p>See feedback submitted by users</p>
+            <a th:href="@{/admin/feedback}" class="btn">Go</a>
+        </div>
+
+        <div class="card logout-card">
+            <h3>Logout</h3>
+            <p>End admin session</p>
+            <a th:href="@{/logout}" class="btn danger">Logout</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

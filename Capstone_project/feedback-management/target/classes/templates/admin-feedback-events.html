@@ -1,0 +1,9 @@
+<h2>Select Event</h2>
+
+<ul>
+    <li th:each="e : ${events}">
+        <a th:href="@{/admin/feedback/{id}(id=${e.id})}"
+           th:text="${e.eventName}">
+        </a>
+    </li>
+</ul>

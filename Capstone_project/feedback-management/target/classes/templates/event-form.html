@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Event</title>
+    <link rel="stylesheet" th:href="@{/css/admin-pages.css}">
+</head>
+<body>
+
+<div class="page-container">
+
+    <h1>Create Event (Admin)</h1>
+
+    <!-- CREATE EVENT CARD -->
+    <div class="card">
+        <form th:action="@{/admin/events}" th:object="${event}" method="post">
+
+            <label>Event Name</label>
+            <input type="text" th:field="*{eventName}" placeholder="Event Name" required>
+
+            <label>
+                <input type="checkbox" th:field="*{published}">
+                Publish Event
+            </label>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Save Event</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- ALL EVENTS -->
+    <h2>All Events</h2>
+
+    <div class="card">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Event Name</th>
+                    <th>Published</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="e : ${events}">
+                    <td th:text="${e.id}"></td>
+                    <td th:text="${e.eventName}"></td>
+                    <td th:text="${e.published ? 'YES' : 'NO'}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a th:href="@{/admin}" class="back-link">⬅ Back to Admin Panel</a>
+
+</div>
+
+</body>
+</html>

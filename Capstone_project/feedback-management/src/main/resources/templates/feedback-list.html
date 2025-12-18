@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Feedback Management</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Feedback Management</h2>
+
+    <!-- 🔍 SEARCH & FILTER BAR -->
+    <div class="search-filter-box">
+
+        <!-- Search -->
+        <form method="get" action="/list" class="search-form">
+            <input type="text" name="keyword" placeholder="Search by name or email">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Filter -->
+        <form method="get" action="/list" class="filter-form">
+            <select name="rating">
+                <option value="">All Ratings</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+
+    </div>
+
+    <!-- TABLE -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Rating</th>
+                <th>Comments</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="f : ${feedbacks}">
+                <td th:text="${f.name}"></td>
+                <td th:text="${f.email}"></td>
+                <td th:text="${f.rating}"></td>
+                <td th:text="${f.comments}"></td>
+                <td>
+                    <a th:href="@{/delete/{id}(id=${f.id})}"
+                       class="delete-btn"
+                       onclick="return confirm('Delete this feedback?')">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bottom-links">
+        <a href="/">Back</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+</div>
+
+</body>
+</html>

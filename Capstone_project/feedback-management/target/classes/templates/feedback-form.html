@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<title>Submit Feedback</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+	<div class="feedback-container">
+
+		<div class="feedback-card">
+
+			<h2>Submit Feedback</h2>
+
+			<!-- SUCCESS MESSAGE -->
+			<p class="success" th:if="${success}">
+				Feedback submitted successfully!
+			</p>
+
+			<form th:action="@{/submit}" th:object="${feedback}" method="post">
+
+				<input type="text" th:field="*{name}" placeholder="Your Name" required>
+
+				<input type="email" th:field="*{email}" placeholder="Your Email" required>
+				
+				<select th:field="*{event}" required>
+				        <option value="">Select Event</option>
+				        <option th:each="e : ${events}"
+				                th:value="${e.id}"
+				                th:text="${e.eventName}">
+				        </option>
+				    </select>
+
+
+				<!-- STAR RATING -->
+				<div class="star-rating">
+					<input type="radio" th:field="*{rating}" id="star5" value="5" />
+					<label for="star5" title="Excellent">★</label>
+
+					<input type="radio" th:field="*{rating}" id="star4" value="4" />
+					<label for="star4" title="Very Good">★</label>
+
+					<input type="radio" th:field="*{rating}" id="star3" value="3" />
+					<label for="star3" title="Good">★</label>
+
+					<input type="radio" th:field="*{rating}" id="star2" value="2" />
+					<label for="star2" title="Average">★</label>
+
+					<input type="radio" th:field="*{rating}" id="star1" value="1" />
+					<label for="star1" title="Poor">★</label>
+				</div>
+
+
+				<textarea th:field="*{comments}" placeholder="Write your feedback here..." rows="4" required></textarea>
+
+				<button type="submit">Submit Feedback</button>
+
+			</form>
+
+			<div class="links">
+				<form th:action="@{/logout}" method="post" class="logout-form">
+				    <button type="submit" class="logout-btn">Logout</button>
+				</form>
+
+			        <!-- ✅ ONLY ADMIN CAN SEE THIS -->
+			        <span sec:authorize="hasRole('ADMIN')">
+			            | <a th:href="@{/admin/feedback}">View Feedback</a>
+			        </span>
+			    </div>
+
+	</div>
+
+</body>
+
+</html>
